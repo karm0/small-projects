@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        padding: 0;
+        margin: 0;
+        background: rgb(54, 151, 216);
+    }
+    .Submarine{
+        width: 200px;
+        height: 80px;
+        background-color: rgb(255, 174, 0);
+        border-radius: 80px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        margin: auto;
+        animation: move1 1s infinite;
+        transition: 0.5s;
+    }
+    @keyframes move1{
+        0%{
+            transform: translateY(0,0);
+        }
+        50%{
+            transform: translateY(15px);
+        }
+        100%{
+            transform: translateY(0,0);
+        }
+    }
+    .Submarine::before{
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 5px;
+        background-color: rgba(241, 239, 234, 0.466) ;
+        top: 15px;
+        left: 25px;
+        border-radius: 5px;
+    }
+    .top{
+        position: relative;
+        width: 65px;
+        border-bottom: 25px solid rgb(255, 174, 0);
+        border-right: 18px solid transparent;
+        bottom: 45px;
+        left: 58px;
+    }
+    .more{
+        width: 10px;
+        height: 17px;
+        border-right: 5px solid rgb(255, 174, 0);
+        border-top: 5px solid rgb(255, 174, 0);
+        position: relative;
+        bottom: 0;
+        left: 4px;
+    }
+    .light{
+        position: relative;
+        height: 5px;
+        border-left: 115px solid #fff;
+        border-top: 22px solid transparent;
+        border-bottom: 22px solid transparent;
+        right: 115px;
+        bottom: 28px;
+        opacity: 0.50;
+    }
+    .window{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: aqua;
+        border: 2px solid black;
+        top: 25px;
+        left: 15px;
+        overflow: hidden;
+    }
+    
+
+    .window-1{
+        left: 65px;
+    }
+    .window-2{
+        right: 20px;
+    }
+    .details{
+        position: relative;
+        width: 4px;
+        height: 35px;
+        background-color: #fff;
+        transform: rotate(135deg);
+        top: 2px;
+        right: 2px;
+        animation: move 2s infinite;
+    }
+    @keyframes move{
+        100%{
+            transform: rotate(135deg) translate(-30px);
+        }
+    }
+    .engine{
+        height: 20px;
+        width: 10px;
+        background-color: #fff;
+        position: relative;
+        left: 202px;
+        bottom: 15px;
+        transform-style: preserve-3d;
+        animation: move2 0.5s linear infinite;
+    }
+    @keyframes move2{
+        100%{
+            transform: rotateX(180deg);
+        }
+    }
+</style>
+<body>
+    <div class="Submarine">
+        <div class="top">
+            <div class="more">
+                <div class="light">
+                </div>
+            </div>
+        </div>
+        <div class="window window-1">
+            <div class="details"></div>
+        </div>
+        <div class="window window-2">
+            <div class="details"></div>
+        </div>
+        <div class="engine"></div>
+    </div>
+</body>
+</html>

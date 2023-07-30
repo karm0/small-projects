@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: #000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+    .container{
+        position: absolute;
+        width: 50vh;
+        height: 15vh;
+        background-color: #00a0b0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 55px;
+        cursor: pointer;
+        transition: 0.4s;
+        overflow: hidden;
+    }
+    .container.active{
+        height: 5vh;
+    }
+    .container::before{
+        content: '';
+        position: absolute;
+        width: 50vh;
+        height: 5vh;
+        background-color: #fff;
+        border-radius: 55px;
+        left: -380px;
+        
+    }
+    .container.active::before{
+        animation: move 6s ease-in-out forwards;
+    }
+    @keyframes move{
+        100%{
+            transform: translateX(100%);
+        }
+    }
+    .header{
+        transition: all 0.8s;
+    }
+
+    .header span{
+        font-size: 2em;
+        font-weight: 550;
+        color: #ccc;
+        
+    }
+    .container.active .header{
+        transform: translateY(50px);
+    }
+
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="header">
+            <span id="text"> Download</span>
+        </div>
+    </div>
+    <script>
+        let btn = document.querySelector('.container');
+        let text = document.getElementById('text');
+
+        btn.addEventListener('click',function(){
+            btn.classList.toggle('active');
+        })
+
+        setInterval(()=>{
+            btn.classList.remove('active');
+            text.innerHTML = '✓ Download';
+        },7200)
+
+    </script>
+</body>
+</html>

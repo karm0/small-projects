@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        width: 90vw;
+        height: 90vh;
+        margin: auto;
+        flex-direction: column;
+        overflow: hidden;
+        background: black;
+        text-align: center;
+    }
+    .container h1{
+        color: #fff;
+    }
+    #output1{
+        width: 80%;
+        height: 3%;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 8px;
+        z-index: 100;
+    }
+    #output1 span{
+        color: #fff;
+        font-weight: bold;
+    }
+    #output2{
+        width: 80%;
+        height: 3%;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 8px;
+        z-index: 100;
+    }
+    #output2 span{
+        color: #fff;
+        font-weight: bold;
+    }
+    #output3{
+        width: 80%;
+        height: 3%;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 8px;
+        z-index: 100;
+    }
+    #output3 span{
+        color: #fff;
+        font-weight: bold;
+    }
+    .info{
+        width: 80%;
+        height: 3%;
+        border: 1px solid #fff;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 8px;
+        z-index: 100;
+        color: #fff;
+        font-weight: bold;
+    }
+
+
+</style>
+<body>
+    <div class="container">
+        <h1>Information on personnel 🗒️</h1>
+        <div class="info">
+            <span>Id</span>
+            <span>Name</span>
+            <span>salary</span>
+            <span>🏢</span>
+        </div>
+        <div id="output1">
+            <span id="outputId"></span>
+            <span id="outputName"></span>
+            <span id="outputSalary"></span>
+            <span>🙋‍♂️</span>
+        </div>
+        <div id="output2">
+            <span id="one"></span>
+            <span id="two"></span>
+            <span id="three"></span>
+            <span>🙋</span>
+        </div>
+        <div id="output3">
+            <span id="four"></span>
+            <span id="five"></span>
+            <span id="six"></span>
+            <span>🙋‍♀️</span>
+        </div>
+    </div>
+    <script>
+        function Sellers(id, name, salary) {
+            this.i = id;
+            this.n = name;
+            this.s = salary;
+        }
+        let sellerOne = new Sellers(1, "Harry", "1000$");
+        let sellerTwo = new Sellers(2, "jake", "500$");
+        let sellerThree = new Sellers(3, "Emily", "800$");
+
+        outputId.textContent = sellerOne.i;
+        outputName.textContent = sellerOne.n;
+        outputSalary.textContent = sellerOne.s;
+
+
+        one.textContent = sellerTwo.i;
+        two.textContent = sellerTwo.n;
+        three.textContent = sellerTwo.s;
+
+
+        four.textContent = sellerThree.i;
+        five.textContent = sellerThree.n;
+        six.textContent = sellerThree.s;
+    </script>
+</body>
+</html>

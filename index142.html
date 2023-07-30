@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  canvas {
+
+    border: 2px solid;
+  }
+</style>
+<body>
+  <canvas id="myCanvas" width="900" height="400">
+
+<script>
+  var p;
+  let canvas = document.getElementById('myCanvas');
+  var c = canvas.getContext("2d");
+  
+  let x = canvas.width;
+  let h = canvas.height;
+
+
+  
+  
+  function randomColor(){
+    let colors = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F'];
+      let max = [];
+      for(let i = 0; i < 6; i++){
+        max.push(colors[Math.floor(Math.random() * colors.length)]);
+      }
+      return `#${max.join("")}`;
+      
+    }
+    
+  function Ball() {
+    this.color = randomColor();
+    this.randomBallW = Math.floor(Math.random() * x);
+    this.randomBallH = Math.floor(Math.random() * h);
+    this.randomRaduse = Math.floor(Math.random() * 20 + 25);
+    this.randomRaduse;
+    this.design = function(){
+      c.beginPath();
+      c.arc(this.randomBallW, this.randomBallH, this.randomRaduse, 0, 2 * Math.PI);
+      c.fillStyle = this.color;
+      c.fill()
+    };
+    
+  }
+  var bal = [];
+  for(var i =0; i < 50; i++){
+    bal.push(new Ball());
+    bal[i].design();
+    let l= i.length
+  }
+
+
+
+
+</script>
+</body>
+</html>

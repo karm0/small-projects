@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+    .container{
+        width: 40%;
+        height: 40vh;
+        background-color:#000;
+        border-radius: 10px;
+        position: relative;
+    }
+    .container p{
+        position: relative;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+    }
+    .button{
+        padding: 10px;
+        display: block;
+        transform: translate(40%,10%);
+    }
+    .button #btn{
+        font-size: 1.4rem;
+        border-radius: 10px;
+        padding: 5px;
+        display: block;
+        margin-bottom: 40px;
+    }
+    #text{
+        color: #fff;
+        font-size: 1.3rem;
+        display: flex;
+        transform: translate(-35%,10%);
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <p>Display Data And Time</p>
+        <div class="button">
+            <button type="button" id="btn">click</button>
+            <span id="text"></span>
+        </div>
+    </div>
+    <script>
+        let btn = document.getElementById('btn');
+        let text = document.getElementById('text');
+        
+
+        btn.addEventListener('click',function(){
+            text.textContent = Date();
+        })
+
+    </script>
+</body>
+</html>

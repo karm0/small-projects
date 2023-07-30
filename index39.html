@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+    .container{
+        background-color: #fff;
+        width: 70vh;
+        box-shadow: 0 0 5px 7px #ccc;
+        text-align: center;
+    }
+    input,
+    button{
+        width: 98%;
+        height: 4vh;
+        padding: 5px;
+        margin-bottom: 5px;
+        border-radius: 10px;
+        border: 1.5px solid;
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    button{
+        cursor: pointer;
+        background-color: #ccc;
+        font-size: 18px;
+        transition: 0.5s;
+    }
+    p{
+        font-size: 20px;
+        margin: 5px 0 0 0;
+        text-align: left;
+        padding: 10px;
+        position: relative;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <input type="text" id="input">
+        <button id="btn"> Add Message</button>
+        <p id="message"></p>
+    </div>
+    <script>
+        let input = document.getElementById('input');
+        let btn = document.getElementById('btn');
+        let p = document.getElementById('message');
+
+        btn.onclick = function(){
+        let inputValue = input.value;
+        
+
+        if(inputValue != ''){
+
+            p.innerHTML = inputValue;
+
+            input.value = ''
+        }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 30px;
+        border: 1px solid #fff;
+        background: #dcdcdc;
+    }
+    .container p{
+        line-height: 5;
+    }
+</style>
+<body>
+    <div class="container">
+        <p>🥲</p>
+        <p>😃</p>
+        <p>😄</p>
+        <p>☹️</p>
+    </div>
+    <script>
+
+        let x = document.getElementsByTagName('p');
+        // x.textContent = '😄';
+        x[0].textContent = '😄';
+        x[1].textContent = '🥲';
+        x[2].textContent = '☹️';
+        x[3].textContent = '😃';
+    </script>
+</body>
+</html>

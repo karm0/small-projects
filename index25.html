@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: #000;
+    }
+    .all{
+        position: absolute;
+        top: 40%;
+        left: 40%;
+    }
+    .header{
+        display: flex;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    .header li{
+        padding: 10px;
+        background-color: #ccc;
+        border-right: 1px solid rgb(179, 176, 176);
+        cursor: pointer;
+    }
+    .header li.active,
+    .header li:hover{
+        background-color: rgb(179, 176, 176) ;
+    }
+    .container{
+        background-color: rgb(179, 176, 176);
+        width: 30vh;
+    }
+    .container > div{
+        padding: 20px;
+        color: #000;
+        font-size: 1.3em;
+    }
+    .container >div:not(:first-child){
+        display: none;
+        
+    }
+</style>
+<body>
+    <div class="all">
+        <ul class="header">
+            <li class="active" data-cut=".one">one</li>
+            <li data-cut=".twe">two</li>
+            <li data-cut=".three">three</li>
+        </ul>
+        <div class="container">
+            <div class="one">first content</div>
+            <div class="twe">second content</div>
+            <div class="three">the third content</div>
+        </div>
+    </div>
+    <script>
+        let items = document.querySelectorAll('.header li');
+        let itemsArray = Array.from(items);
+        let div = document.querySelectorAll('.container > div');
+        let divArryay = Array.from(div);
+
+        itemsArray.forEach((ele)=>{
+            ele.addEventListener('click',function(e){
+                itemsArray.forEach((ele)=>{
+                    ele.classList.remove('active');
+
+                });
+                e.currentTarget.classList.add('active');
+                divArryay.forEach((div)=>{
+                    div.style.display = "none";
+                });
+                //console.log(e.currentTarget.dataset.cut);
+                document.querySelector(e.currentTarget.dataset.cut).style.display = "block";
+            });
+        });
+        
+    </script>
+</body>
+</html>

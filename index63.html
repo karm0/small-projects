@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+    .container{
+        width: 90vw;
+        height: 80vh;
+        border: 1px solid black;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: green;
+    }
+    .container::before{
+        content: '';
+        width: 100%;
+        height: 40%;
+        background-color:rgb(87, 167, 253);
+        position: absolute;
+        top: 0;
+    }
+    .container::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 40%;
+        background-color: rgb(88, 88, 88);
+        bottom: 0;
+    }
+    .container > span{
+        font-size: 10vw;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        z-index: 100;
+        position: relative;
+        top: 10%;
+
+    }
+    .background{
+        position: absolute;
+        top: 1%;
+        right: 10%;
+    }
+    .background span{
+        font-size: 10vw;
+    }
+    .container span:nth-child(5){
+        animation: move 5s linear infinite;
+    }
+    @keyframes move{
+        0%{
+            left: 0%;
+        }
+        100%{
+            left: -60%;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="background">
+            <span>🌞</span>
+        </div>
+        <span>🔥</span>
+        <span >🚕</span>
+        <span>🚚</span>
+        <span>🚒</span>
+    </div>
+</body>
+</html>

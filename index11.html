@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #000;
+    }
+    .container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        
+    }
+    .container div{
+        position: absolute;
+        width: 30%;
+        height: 30vh;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.5s linear; 
+    }
+    .container .bottom{
+        position: absolute;
+        font-size: 40px;
+        top: 0;
+        border-radius: 50%;
+        background: #fff;
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .bottom-1{
+        z-index: 1;
+    }
+</style>
+<body>
+    <div class="container" id="alldiv">
+        <div class="bottom bottom-1" id="one" >🎁</div>
+        <div class="bottom bottom-2" id="two" onclick="open()">⚽</div>
+        <div class="bottom bottom-3" id="three" onclick="open()">😃</div>
+        <div class="bottom bottom-4" id="four" onclick="open()">🎶</div>
+        <div class="bottom bottom-5" id="five" onclick="open()">✨</div>
+    </div>
+</body>
+<script>
+    let allDiv = document.getElementById("alldiv");
+    let one = document.getElementById("one");
+    let two = document.getElementById("two");
+    let three = document.getElementById("three");
+    let four = document.getElementById("four");
+    let five = document.getElementById("five");
+    let i=0;
+    
+    
+    allDiv.addEventListener("click",function open(){
+        if(i==0){
+        two.style.transform = "translateX(-150px)";
+        three.style.transform = "translateY(-150px)";
+        four.style.transform = "translate(150px)";
+        five.style.transform = "translateY(150px)";
+        i=1;
+        }else{
+        two.style.transform = "translateX(0)";
+        three.style.transform = "translateY(0)";
+        four.style.transform = "translate(0)";
+        five.style.transform = "translateY(0)";
+        }
+
+    });
+
+    
+</script>
+</html>

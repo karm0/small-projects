@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+    .container{
+        border: 1px solid #fff;
+        width: 80vh;
+        height: 50vh;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        position: relative;
+        background: linear-gradient(#61f7ea,#1e78b0);
+    }
+    .container >div{
+        font-size: 1.7em;
+        border: 1px solid #fff;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        padding: 10px;
+        
+    }
+    .container >div:first-child{
+        text-transform: uppercase;
+    }
+    .container >div:nth-child(2){
+        text-transform: capitalize;
+    }
+    .container >div:nth-child(3){
+        text-transform: lowercase;
+    }
+    .container span{
+        padding: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div><span>UPPERCASE: </span> hello there</div>
+        <div><span>Capitalize: </span>hello there</div>
+        <div><span>lowercase: </span>hello there</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        width: 80vw;
+        height: 80vh;
+        border: 1px solid;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        color: #fff;
+        letter-spacing: 20px;
+        font-size: 5vw;
+        background: #ecd59f;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <div id="container"></div>
+
+    <script>
+
+        let container = document.getElementById('container');
+        
+        let mySet = new Set([1, 2, 3, 4, 1, 2, 3, 4]);
+
+        container.textContent = [...mySet];
+
+        
+    </script>
+</body>
+</html>

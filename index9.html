@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        box-sizing: border-box;
+        margin: 0;
+    }
+    .container{
+        margin: 40px auto;
+        width: 200px;
+        perspective: 200px;
+        cursor: pointer;
+    }
+    .box{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        transform-style: preserve-3d;
+        transition:  1s;
+        transform-origin: right center;
+        
+    }
+    .box:hover{
+        transform: translate(-100%) rotateY(-180deg);
+    }
+    .box .face{
+        position: absolute;
+        width:100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 40px;
+        backface-visibility: hidden;
+    }
+    .box .face-1{
+        background-color: blue;
+        border-radius: 10px;
+    }
+    .box .face-2{
+        background-color: yellow;
+        transform: rotateY(180deg);
+        border-radius: 10px;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="face face-1">😎</div>
+            <div class="face face-2">😂</div>
+        </div>
+    </div>
+</body>
+</html>

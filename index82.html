@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+        width: 90vw;
+        height: 90vh;
+        margin: auto;
+        border-radius: 10px;
+        flex-direction: row;
+        background: #c8e4fd;
+    }
+    .container::before{
+        content: '';
+        width: 90%;
+        height: 30%;
+        background: #929292;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    }
+    .container:after{
+        content: '';
+        width: 90%;
+        height: 30%;
+        background: green;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 8.8%;
+        border-radius: 0 0 10px 10px;
+    }
+    .container span{
+        font-size: 10vw;
+        z-index: 1;
+    }
+    .container .sun{
+        position: absolute;
+        top: 3%;
+        right: 10%;
+    }
+</style>
+<body>
+    <div class="container">
+        <span class="sun">🌞</span>
+        <span id="output1"></span>
+        <span id="output2"></span>
+        <span id="output3"></span>
+        <span id="output4"></span>
+        <span id="output5"></span>
+    </div>
+    
+    <script>
+        let myMap = new Map()
+        myMap.set(1, '🚗')
+        myMap.set(2, '🚌')
+        myMap.set(3, '🚕')
+        myMap.set(4, '🚑')
+        myMap.set(5, '🚒')
+
+        
+        output4.textContent = [...myMap.get(4)]
+        output5.textContent = [...myMap.get(5)]
+        myMap.clear()
+        output1.textContent = [...myMap.get(1)]
+        output2.textContent = [...myMap.get(2)]
+        output3.textContent = [...myMap.get(3)]
+        
+
+    </script>
+</body>
+</html>

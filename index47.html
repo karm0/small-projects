@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+    h2{
+        border: 1px solid #fff;
+        height: 10vh;
+        width: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(#ffdf40,#ff8359);
+        z-index: 1;
+        border-radius: 5px;
+        color: #fff;
+    }
+    span{
+        position: absolute;
+        border: 1px solid #fff;
+        width: 80vh;
+        height: 50vh;
+        background: linear-gradient(#eece30,#cc4113);
+        border-radius: 5px;
+        animation: move 4s linear infinite;
+    }
+    @keyframes move{
+        0%{
+            height: 30vh;
+        }
+        50%{
+            height: 80vh;
+        }
+        100%{
+            height: 30vh;
+        }
+    }
+</style>
+<body>
+    <h2>↑ Height ↓</h2>
+    <span></span>
+</body>
+</html>

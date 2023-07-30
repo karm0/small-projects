@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            overflow: hidden;
+        }
+        .icon{
+            display: flex;
+            width: 20%;
+            height: 20vh;
+            border: 4px solid #fff;
+            justify-content: space-around;
+            border-radius: 10px;
+        }
+        .icon::before{
+            content: '';
+            width: 5px;
+            height: 150px;
+            background: #fff;
+            position: absolute;
+            
+        }
+        .icon > div{
+            position: relative;
+            font-size: 40px;
+            top: 50px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .icon > div:hover{
+            filter: grayscale(100);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">
+            <div>🤡</div>
+            <div>🤖</div>
+        </div>
+    </div>
+</body>
+</html>

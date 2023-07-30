@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    span{
+        width: 300px;
+        height: 300px;
+        background-image: radial-gradient(#ff63de 5%,#5496ff 30%,#b122e5 50%,#1c2383 70%);
+        animation: move 4s linear infinite;
+        border-radius: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+    }
+    @keyframes move{
+        to{
+            transform: rotate(1turn);
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <span></span>
+    </div>
+</body>
+</html>

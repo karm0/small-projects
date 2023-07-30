@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: black;
+        transition: 0.5s;
+    }
+    .container{
+        position: relative;
+        width: 350px;
+        height: 70px;
+        background: rgb(251, 255, 0);
+        border-radius: 20px;
+    }
+    .container ul{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+    }
+    .container ul li{
+        position: relative;
+        list-style: none;
+        width: 70px;
+        height: 70px;
+    }
+    .container ul li a{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        width: 100%;
+        font-size: 500;
+    }
+    .container ul li a .title{
+        position: absolute;
+        top: -70px;
+        left: 5px;
+        color: black;
+        padding: 10px 10px;
+        border-radius: 10px;
+        transition: 0.5s;
+        background: #fff;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .container ul li a .icon{
+        position: relative;
+        display: block;
+        text-align: center;
+        transition: 1s;
+        font-size: 25px;
+    }
+    .container ul li:hover a .title{
+        opacity: 1;
+        visibility: visible;
+    }
+</style>
+<body>
+    <div class="container">
+        <ul>
+            <li class="list">
+                <a href="">
+                    <span class="title">Happy</span>
+                    <span class="icon">😂</span>
+                </a>
+            </li>   
+            <li class="list">   
+                <a href="">
+                    <span class="title">Think</span>
+                    <span class="icon">🤔</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="">
+                    <span class="title">Sad</span>
+                    <span class="icon">😢</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="">
+                    <span class="title">Angry</span>
+                    <span class="icon">😡</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

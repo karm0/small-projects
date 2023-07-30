@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+    .container{
+        position: relative;
+        width: 40vh;
+        height: 40vh;
+        background: #0ebcc9;
+        transform-style: preserve-3d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transform: perspective(2000px);
+        transition: 1s;
+        cursor: pointer;
+    }
+    .container .center{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background: #00cfd9;
+        transform-style: preserve-3d;
+        overflow: hidden;
+        z-index: 2;
+        transform-origin: left;
+        transition: 1s ease-in-out;
+    }
+    .container .center span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .container .emotion{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 1;
+    }
+    .container span{
+        font-size: 6em;
+        width: 100%;
+        height: 100%;
+    }
+    .container h2{
+        font-size: 2em;
+        color: #fff;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="center">
+            <span>😁</span>
+        </div>
+            <div class="emotion">
+                <span>😁</span>
+                <h2>Happy</h2>
+            </div>
+    </div>
+    <script>
+        let container = document.querySelector('.container');
+        let center = document.querySelector('.center');
+        
+        container.onclick = function cart(){
+            center.style.transform = 'rotateY(-180deg)';
+            container.style.transform =  'translateX(50%)';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .all-items{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 95vw;
+        height: 95vh;
+        background: #fff;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        width: 80vw;
+        height: 80vh;
+        margin: auto;
+        flex-direction: column;
+        text-align: center;
+        background: black;
+        text-transform: capitalize;
+        overflow: hidden;
+        z-index: 1000;
+    }
+    .container .info{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        height: 10%;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        z-index: 100;
+        background: #fff;
+    }
+    .info span{
+        color: black;
+        font-weight: bold;
+        font-size: 3vw;
+    }
+    #output{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        height: 10%;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        margin-top: 10px;
+        z-index: 100;
+        background: #fff;
+    }
+    #output span{
+        color: black;
+        font-weight: bold;
+        font-size: 3vw;
+    }
+    .line{
+        width: 1vw;
+        height: 80vh;
+        background: #fff;
+        margin: auto;
+        position: absolute;
+        left: 1%;
+        animation: move 4s linear infinite;
+    }
+    @keyframes move{
+        0%{
+            left: 1%;
+        }
+        100%{
+            left: 100%;
+        }
+    }
+</style>
+<body>
+    <div class="all-items">
+        <div class="container">
+            <div class="info">
+                <span>emotion</span>
+                <span>-</span>
+                <span>mood</span>
+                <span>-</span>
+                <span>color</span>
+            </div>
+            <div id="output">
+                <span id="one"></span>
+                <span>-</span>
+                <span id="two"></span>
+                <span>-</span>
+                <span id="three"></span>
+            </div>
+            <div class="line">
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        class User{
+            constructor(emotion, mood, color) {
+                this.e = emotion;
+                this.m = mood;
+                this.c = color;
+            }
+        }
+        let emoji1 = new User('😂', 'happy', 'yellow');
+
+        one.textContent = emoji1.e;
+        two.textContent = emoji1.m;
+        three.textContent = emoji1.c;
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        min-height: 100vh;
+        box-sizing: border-box;
+        transition: 0.5s;
+    }
+    body.open{
+        background-color: #000;
+        transition: 0.5s;
+    }
+    .label{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        background-color: #000;
+        width: 60px;
+        height: 25px;
+        border-radius: 50px;
+        padding: 5px;
+    }
+    .boll{
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background: #fff;
+        border-radius: 50%;
+        top: 5px;
+        left: 5px;
+        transition: 0.3s linear;
+    }
+    .check{
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        z-index: 100;
+        opacity: 0;
+    }
+    .check:checked +.label .boll{
+        transform: translateX(35px);
+    }
+</style>
+<body>
+    <input type="checkbox" class="check" id="enter">
+    <label form="checkbox" class="label">
+        <span class="icon sun">🔆</span>
+        <span class="icon moon">🌙</span>
+        <div class="boll"></div>
+    </label>
+    <script>
+        let btn = document.getElementById("enter");
+        console.log(btn);
+        btn.addEventListener("click", function(){
+            document.body.classList.toggle("open");
+        });
+    </script>
+</body>
+</html>

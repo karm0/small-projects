@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s linear;
+    background: #162447;
+  }
+  .container{
+    border: 4px solid #ddd;
+    display: grid;
+    grid-template-columns: repeat(4,12vw);
+    padding: 1.5vw;
+    background-color: black;
+  }
+  .screen{
+    grid-column: span 4;
+    height: 90%;
+    font-size: 4vw;
+    border: 2px solid #ddd;
+    margin-bottom: 1rem;
+    padding: 0 .3rem;
+    color: #ddd;
+  }
+  .screen .output{
+    text-align: end;
+  }
+  .container span{
+    width: 7.8vw;
+    height: 7.8vw;
+    font-size: 5vw;
+    border: 2px solid #ddd;
+    color: #ddd;
+    margin: auto;
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+</style>
+<body>
+  <div class="container">
+    <div class="screen">
+      <div class="value">8,4,25,3,16,6</div>
+      <div class="output" id="output"></div>
+    </div>
+      <span>7</span>
+      <span>8</span>
+      <span>9</span>
+      <span>-</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+      <span>+</span>
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>/</span>
+      <span>0</span>
+      <span>.</span>
+      <span>=</span>
+      <span>*</span>
+  </div>
+  <script>
+    function sqrtNumbers(array){
+      let newArray = [];
+      for(let i = 0; i < array.length; i++){
+        if(Number.isInteger(Math.sqrt(array[i]))){
+          newArray.push(Math.sqrt(array[i]));
+        }else{
+          newArray.push(array[i]);
+        }
+      }
+      return newArray;
+    }
+    console.log(sqrtNumbers([8, 4, 25, 3, 16, 6]));
+    output.textContent = sqrtNumbers([8, 4, 25, 3, 16, 6]);
+  </script>
+</body>
+</html>

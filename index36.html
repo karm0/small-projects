@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+    .container{
+        background-color: #000;
+        width: 100vh;
+        height: 80vh;
+        position: relative;
+        border-radius: 10px;
+    }
+    .container:before{
+        width: 4px;
+        height: 100%;
+        left: 50%;
+    }
+    .container:after{
+        width: 100%;
+        height: 4px;
+        top: 50%;
+    }
+    .container::after,
+    .container::before{
+        content: '';
+        position: absolute;
+        background-color: #ccc;
+    }
+    .container .box{
+        background-color: green;
+        width: 20vh;
+        height: 15vh;
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0,-50%);
+        z-index: 1;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        
+        background: #000;
+    }
+    .conainer{
+        position: absolute;
+        border: 2px solid #fff;
+        width: 20%;
+        height: 15vh;
+        display: block;
+        text-align: center;
+        padding: 10px;
+        border-radius: 20px;
+        top: 50%;
+        left: 30%;
+        transform: translate(50%,-50%);
+        box-shadow: 0 5px 10px 5px #fff;
+    }
+    
+    .conainer p{
+        color: #000;
+        background: #ccc;
+        border-radius: 20px;
+        margin-bottom: 30px;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    button{
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    button:hover{
+        padding: 10px;
+        
+    }
+
+</style>
+<body>
+    <div class="conainer">
+        <p id="text">Welcome</p>
+        <button type="button" id="btn">Click</button>
+    </div>
+    <script>
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+
+        btn.addEventListener('click',function(){
+            text.textContent = "Hello agin"
+        })
+
+
+        
+        
+    </script>
+</body>
+</html>

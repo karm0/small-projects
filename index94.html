@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+        width: 90vw;
+        height: 90vh;
+        margin: auto;
+        border-radius: 10px;
+        background: black;
+        flex-direction: column;
+        text-align: center;
+        overflow: hidden;
+    }
+    .container > div{
+        font-size: 8vw;
+        color: #fff;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        position: relative;
+        overflow: hidden;
+        font-weight: bold;
+    }
+    #output1::before{
+        content: 'id';
+        position: absolute;
+        opacity: 0.1;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        animation: move 6s linear infinite;
+    }
+    #output2::before{
+        content: 'name';
+        position: absolute;
+        opacity: 0.1;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        animation: move 9s linear infinite;
+    }
+    #output3::before{
+        content: 'salary';
+        width: 100%;
+        position: absolute;
+        opacity: 0.1;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        animation: move 7s linear infinite;
+    }
+    @keyframes move{
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(-100%);
+        }
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div id="output1">id : undefined</div>
+        <div id="output2">name: undefined</div>
+        <div id="output3">salary: undefined</div>
+        <div class="harry">🙋‍♀️</div>
+    </div>
+        <script>
+            function User(id,name,salary){
+                this.i = id;
+                this.n = name;
+                this.s = salary;
+            };
+            let info = new User(1,'Harry','1000$');
+
+            output1.textContent = info.i;
+            output2.textContent = info.n;
+            output3.textContent = info.s;
+
+
+        </script>
+</body>
+</html>

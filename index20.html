@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: #000;
+        margin: 0;
+        
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90vh;
+        height: 30vh;
+        border: 3px solid #fff;
+        overflow: hidden;
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%,50%);
+        border-radius: 5px;
+    }
+    .container ul{
+        list-style: none;
+    }
+    .container ul li{
+        font-size: 3rem;
+        width: 20vh;
+        height: 9vh;
+        margin-bottom: 100px;
+        position: relative;
+        top: 50px;
+    }
+    button:nth-child(1){
+        position: relative;
+        left: -5vh;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    button:nth-child(2){
+        position: relative;
+        left: 30vh;
+        cursor: pointer;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <button id="btn-1">&lt;</button>
+        <button id="btn-2">&gt;</button>
+        <ul id="ul">
+            <li>🤔</li>
+            <li>😎</li>
+            <li>🥳</li>
+        </ul>
+    </div>
+    <script>
+        let ul = document.getElementById('ul');
+        let btn1 = document.getElementById('btn-1');
+        let btn2 = document.getElementById('btn-2');
+
+        btn1.addEventListener('click', function(){
+            let lastChild = document.querySelector('.container ul li:last-child');
+            ul.prepend(lastChild);
+        })
+        btn2.addEventListener('click', function(){
+            let firstChild = document.querySelector('.container ul li:first-child');
+            ul.append(firstChild);
+        })
+
+        
+    </script>
+</body>
+</html>

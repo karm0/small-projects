@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background: #000;
+    }
+    .container{
+        position: relative;
+        transform: translate(10%,50%);
+        top: 40vh;
+        box-shadow: 0 0 5px 5px orange;
+        width: 30vh;
+        height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .container p{
+        color: #fff;
+        font-size: 1.5rem;
+    }
+</style>
+<body>
+    <div class="container">
+        <p id="text"></p>
+    </div>
+    <script>
+        let text = document.getElementById('text');
+
+        setInterval(function(){
+            text.innerHTML += 'Hello';
+        },1000)
+    </script>
+</body>
+</html>

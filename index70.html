@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+    .div-one{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        width: 80vw;
+        height: 80vh;
+        font-size: 8vw;
+        border-radius: 10px;
+        box-shadow: 0 0 5px 5px rgb(224, 221, 221);
+        background: rgb(110, 136, 185);
+
+    }
+    .p-one{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .span-one{
+        display: flex;
+        flex-direction: column;
+    }
+
+</style>
+<body>
+
+
+    <script>
+
+        let myDiv = document.createElement("div");
+        myDiv.className = 'div-one';
+
+        let myP = document.createElement('p');
+        myP.className = 'p-one';
+        myP.innerHTML = '🤰';
+        myDiv.appendChild(myP);
+
+
+        let mySpan = document.createElement('span');
+        mySpan.className = 'span-one';
+        mySpan.innerHTML = '👶';
+        myP.appendChild(mySpan);
+
+
+        let mySpan2 = document.createElement('span');
+        mySpan2.className = 'span-twe';
+        mySpan2.innerHTML = '👦';
+        mySpan.appendChild(mySpan2);
+
+
+        document.body.appendChild(myDiv);
+
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background:#000; 
+    }
+    .container{
+        position: relative;
+        box-shadow: 0 0 5px 5px #ccc;
+        padding: 20px;
+        width: 25vh;
+        display: flex;
+        justify-content: space-between;
+    }
+    .container span{
+        font-size: 1.5em;
+        color: #fff;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="container">
+        <span id="minus">-</span>
+        <span id="number">00</span>
+        <span id="plus">+</span>
+    </div>
+    <script>
+        let  minus = document.getElementById('minus');
+        let  number = document.getElementById('number');
+        let  plus = document.getElementById('plus');
+        let a = 0;
+
+        plus.addEventListener('click',function(){
+            a++;
+            a = (a < 10) ? '0' + a : a;
+            number.innerHTML = a;
+            
+        });
+        minus.addEventListener('click',function(){
+            if(a > 0){
+                a--;
+                a = (a < 10) ? '0' + a : a;
+                number.innerHTML = a;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width= , initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #040404;
+  }
+  .container{
+    border: 3px solid orange;
+    width: 90%;
+    height: 45vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container .question{
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+    color: orange;
+    font-size: 8vw;
+  }
+  .container .animation{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+  }
+  .animation .list{
+    position: fixed;
+    display: flex;
+    color: orange;
+    font-size: 5vw;
+  }
+  .animation .top span{
+    animation:  move 4s linear infinite;
+  }
+  @keyframes move{
+    0%{
+      transform: translateY(0vh);
+    }
+    100%{
+      transform: translateY(50vh);
+      opacity: 0;
+    }
+  }
+</style>
+<body>
+  <div class="container">
+    <div class="question">
+      <div class="number">8 * 3</div>
+      <div class="equal">=</div>
+      <div id="output"></div>
+    </div>
+    <div class="animation" id="animation"></div>
+  </div>
+  <script>
+    let calculator = function(operation,value1,value2){
+      return eval(value1 + operation + value2);
+    }
+    output.textContent = calculator('*', 8, 3);
+    
+    
+    const parent = function(){
+      const content = document.createElement('div');
+      content.classList.add('top');
+      animation.append(content);
+      const xo = setInterval(()=>{
+        const codes = document.createElement('span');
+        codes.classList.add('list');
+        let calculattionCodes = ['+','*','-','/'];
+        let random = Math.floor(Math.random() * calculattionCodes.length);
+        codes.innerHTML = calculattionCodes[random];
+        codes.style.left = `${Math.random() * 100}%`;
+        codes.style.top = `${Math.random() * 100}%`
+        content.append(codes)
+      },1000);
+      setTimeout(()=> {
+        clearInterval(xo);
+      },10000)
+      setTimeout(() =>{
+        content.remove()
+      },10001)
+    }
+    setInterval(parent,10000);
+    parent()
+
+  </script>
+</body>
+</html>

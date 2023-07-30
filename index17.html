@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        transition: 0.5s;
+        
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        
+    }
+    .container p{
+        position: absolute;
+        top: 20%;
+        left: 40%;
+        padding: 10px;
+        background-color: rgb(63, 9, 58);
+        width: fit-content;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 20px;
+    }
+    .all-color{
+        position:relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 40%;
+    }
+    .all-color > div{
+        width: 70px;
+        height: 70px;
+        margin: 10px;
+        position: relative;
+        display: flex;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 4px solid #fff;
+        transition: 0.4s;
+    }
+    .red{
+        background-color: red;
+    }
+    .red:hover{
+        padding: 10px;
+    }
+    .blue{
+        background-color: blue;
+    }
+    .blue:hover{
+        padding: 10px;
+    }
+    .yellow{
+        background-color: yellow;
+    }
+    .yellow:hover{
+        padding: 10px;
+    }
+    .black{
+        background-color: black;
+    }
+    .black:hover{
+        padding: 10px;
+    }
+    .green{
+        background-color: green;
+    }
+    .green:hover{
+        padding: 10px;
+    }
+    .all-color.open{
+        background: red;
+    }
+
+
+</style>
+<body>
+    <div class="container">
+        <p>choose color</p>
+        <div class="all-color" id="all">
+            <div class="red"></div>
+            <div class="blue"></div>
+            <div class="yellow"></div>
+            <div class="black"></div>
+            <div class="green"></div>
+        </div>
+    </div>
+    <script>
+        let allDiv = document.querySelectorAll('.all-color div');
+        
+        
+        allDiv.forEach((ele)=>{
+            ele.addEventListener('click', function(){
+                document.body.style.background = ele.className;
+            })
+        })
+    </script>
+</body>
+</html>

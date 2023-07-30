@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+        }
+        .name{
+            width: 80px;
+            height: 40px;
+            border: 1px solid #fff;
+            border-radius: 15px;
+            padding: 10px;
+            color: black;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 50%;
+            cursor: pointer;
+            background-color: #fff;
+            font-weight: 600;
+        }
+        .header{
+            width: 50%;
+            height: 50%;
+            background: rgba(158, 155, 155, 0.5);
+            position: fixed;
+            transform: scale(0);
+            transition: 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 25%;
+            border-radius: 20px;
+        }
+        .header .center{
+            text-align: center;
+            position: relative;
+            top: 25%;
+            margin-top: 4%;
+        }
+        .header .center span{
+            color: #fff;
+            font-size: 25px;
+            position: absolute;
+            top: -100px;
+            left: -30px;
+        }
+        .header a{
+            text-decoration: none;
+            color: #fff;
+            position: absolute;
+            font-size: 30px;
+            right: 40px;
+            top: 20px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header" id="MyDiv">
+        <a href="#" onclick="CloseDiv()">&times;</a>
+        <div class="center">
+            <span >Hello</span>
+        </div>
+    </div>
+    <div onclick="OpenDiv()" class="name" id="remove">Click</div>
+    <script>
+        let TheDiv = document.getElementById("MyDiv");
+        let remove = document.getElementById("remove");
+
+        function OpenDiv(){
+            TheDiv.style.transform = "scale(1)";
+            remove.style.visibility = "hidden";
+
+
+        }
+        function CloseDiv(){
+            TheDiv.style.transform = "scale(0)";
+            remove.style.visibility = "visible";
+        }
+    </script>
+</body>
+</html>

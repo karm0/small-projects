@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: #333;
+    }
+    .container{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 30vh;
+        left: 50%;
+        box-shadow: 0 0 5px 5px orange;
+        width: 10%;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    .container span{
+        color: #fff;
+        font-size: 2em;
+        text-align: center;
+        display: block;
+        position: absolute;
+        transition: 0.5s;
+        cursor: pointer;
+    }
+    .container span::before{
+        content: 'Hello';
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 0;
+        transform: translateX(-150%);
+        transition: 0.5s;
+        
+    }
+    .container:hover::before{
+        transform: translateX(0);
+    }
+    .container:hover span{
+        transform: translateX(150%);
+    }
+</style>
+<body>
+    <div class="container">
+        <span>Hello</span>
+    </div>
+</body>
+</html>

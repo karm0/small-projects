@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+    .container{
+        background-color: #000;
+        width: 100vh;
+        height: 80vh;
+        position: relative;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+    .container p{
+        color: #fff;
+        font-size: 2em;
+    }
+    .container .text{
+        position: absolute;
+        top: 60%;
+        font-size: 2em;
+        border: 2px solid #fff;
+        padding: 20px;
+        border-radius: 20px;
+        width: 10vh;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <p id="number">5 * 5 = <span> 0</span></p>
+        <div class="text"></div>
+    </div>
+    <script>
+        let number = document.getElementById('number');
+        let result = document.querySelector('.container span');
+        let text = document.querySelector('.text');
+
+        
+        let e = 25;
+
+        if(e == 25){
+            result.innerHTML = 25;
+            text.innerHTML = 'True';
+            text.style.color = 'rgb(0, 236, 0)';
+
+        }else{
+            text.innerHTML = 'false';
+            text.style.color = 'red';
+        }
+    </script>
+</body>
+</html>

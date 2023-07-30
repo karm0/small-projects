@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        
+    }
+    .sun{
+        font-size: 10vw;
+        width: 80vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-155%);
+        text-align: end;
+        background: #4adede;
+    }
+    .all-output{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80vw;
+        font-size: 3vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-47%,-50%);
+        z-index: 20;
+
+    }
+    .tree{
+        width: 80vw;
+        font-size: 12vw;
+        display: flex;
+        justify-content: space-around;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: green;
+        z-index: 10;
+    }
+    .play{
+        width: 80vw;
+        font-size: 10vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,50%);
+        display: flex;
+        justify-content: space-between;
+        background: gray;
+    }
+    .boll{
+        font-size: 5vw;
+        z-index: 200;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(300%,200%);
+        display: flex;
+        animation: move 4s  infinite;
+    }
+    @keyframes move{
+        50%{
+            transform: translateY(100px);
+        }
+    }
+</style>
+<body>
+    <div id="container">
+        <div class="sun">🌞</div>
+
+        <div class="all-output">
+            <div id="output1"></div>
+            <div id="output2"></div>
+            <div id="output3"></div>
+        </div>
+
+        <div class="tree">
+            <span>🌳</span>
+            <span>🌳</span>
+            <span>🌳</span>
+        </div>
+
+        <div class="play">
+            <span>🥅</span>
+            <span>🧍‍♂️</span>
+        </div>
+    </div>
+    
+    <script>
+        let myMap = new Map();
+
+        myMap.set('kite','🪁');
+        myMap.set('monkey','🐒');
+        myMap.set('football','⚽');
+        
+        let valuse = myMap.values();
+        
+
+        output1.textContent = valuse.next().value;
+        output2.textContent = valuse.next().value;
+        output3.textContent = valuse.next().value;
+        
+        let football = myMap.get('football');
+        let container = document.getElementById('container');
+
+        
+        if(football == '⚽'){
+            output3.style.display = 'none';
+            let boll = document.createElement("div");
+            boll.className = "boll";
+            container.appendChild(boll);
+            boll.textContent = '⚽'
+        }
+
+    </script>
+</body>
+</html>

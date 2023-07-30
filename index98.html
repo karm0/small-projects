@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        border: 1px solid #fff;
+        width: 90vw;
+        height: 80vh;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background: #131557;
+    }
+    .container::before{
+        content: '🍉';
+        position: absolute;
+        animation: move 4s linear infinite;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .container::after{
+        content: '🍎';
+        position: absolute;
+        animation: move 6s linear infinite;
+        width: 100%;
+        height: 100%;
+    }
+    .container .orange{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 1%;
+        animation: move 8s linear infinite;
+        height: 100%;
+    }
+    @keyframes move{
+        0%{
+            transform: translateY(-100%);
+        }
+        100%{
+            transform: translateY(100%);
+        }
+    }
+    .products{
+        border: 3px solid #fff;
+        border-radius: 20px;
+        width: 40%;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 6vw;
+        background: #242b88;
+    }
+    .products #output3{
+        font-size: 4vw;
+        font-weight: bold;
+    }
+    .shop{
+        border: 3px solid #fff;
+        border-radius: 20px;
+        width: 40%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10vw;
+        background: #242b88;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <span class="orange">🍊</span>
+        <div class="products">
+            <div id="output1"></div>
+            <div id="output2"></div>
+            <div id="output3"></div>
+            <div id="output4"></div>
+        </div>
+        <div class="shop">
+            <span>🛒</span>
+        </div>
+    </div>
+    <script>
+
+        class User {
+            constructor(apple, orange, watermelon, banana){
+                this.apple = apple;
+                this.orange = orange;
+                this.watermelon = watermelon || "finished:🍉";
+                this.banana = banana;
+            }
+        }
+        let fruits = new User('🍎','🍊','','🍌');
+
+
+        output1.textContent = fruits.apple;
+        output2.textContent = fruits.orange;
+        output3.textContent = fruits.watermelon;
+        output4.textContent = fruits.banana;
+    </script>
+</body>
+</html>

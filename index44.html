@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+    .container{
+        width: 50vh;
+        height: 50vh;
+        border: 10px dashed black;
+        border-radius: 50%;
+        background-color: yellow;
+        position: relative;
+    }
+    .container span:first-child{
+        position: absolute;
+        width: 30vh;
+        height: 30vh;
+        border: 10px dotted black;
+        left: 8.5vh;
+        bottom: 8.5vh;
+        border-radius: 50%;
+        background-color: red;
+    }
+    .container span:nth-child(2){
+        position: absolute;
+        width: 10vh;
+        height: 10vh;
+        border: 10px double black;
+        border-radius: 50%;
+        left: 18.5vh;
+        bottom: 18.5vh;
+        background-color: blue;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        border: 1px solid #fff;
+        width: 80vw;
+        height: 80vh;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        background: rgb(94, 45, 45);
+        position: relative;
+        overflow: hidden;
+        font-weight: bold;
+    }
+    .container div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 4vw;
+        z-index: 100;
+    }
+    .center{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .center span{
+        width: 150px;
+        height: 150px;
+        border-radius: 75px;
+        border-top: 10px solid #fff;
+        border: 2px solid transparent black;
+        animation: move 4s linear infinite;
+        opacity: 0.1;
+    }
+    @keyframes move{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    .center span:nth-child(3){
+        position: absolute;
+        top: 15%;
+        animation-delay: -5s;
+    }
+    .center span:nth-child(2){
+        animation-delay: -10s;
+    }
+    
+</style>
+<body>
+    <div class="container">
+        <div id="output1"></div>
+        <div id="output2"></div>
+        <div>👨‍⚕️</div>
+        <div id="output3"></div>
+        <div class="center">
+                <span></span>
+                <span></span>
+                <span></span>
+        </div>
+    </div>
+    <script>
+        class User{
+            constructor(name, salary){
+                this.name = name;
+                this.salary = salary;
+                this.message = function () {
+                    return `Hello ${this.name} Your Salary ${this.salary}`
+                }
+            }
+        }
+        let info = new User('Name: Harry', 'Salary: 1000$');
+
+        output1.textContent = info.name;
+        output2.textContent = info.salary;
+        output3.textContent = info.message();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+    background: #021e2e;
+    color: #fff;
+    font-family: system-ui;
+  }
+  .container{
+    width: 80%;
+    margin: auto;
+    border: 1px solid;
+  }
+  input{
+    width: 80%;
+    border-radius: 5px;
+    height: 30px;
+    padding: 1rem;
+    outline: none;
+    border: none;
+  }
+  .top{
+    margin: 5rem 0;
+    text-align: center;
+  }
+  .caver-btn{
+    padding-top: 3rem;
+  }
+  button{
+    width: 20%;
+    height: 30px;
+    border: none;
+    margin: .5rem 0;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
+  }
+  ul li{
+    border: 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .delet{
+    display: none;
+  }
+</style>
+<body>
+  <div id="container" class="container">
+    <div class="top">
+      <div class="caver-input"><input type="text" id="input"></div>
+      <div class="caver-btn"><button id="btn">add</button></div>
+    </div>
+
+    <div id="bottom" class="bottom">
+      <ul id="ul"></ul>
+    </div>
+  </div>
+  <script>
+
+    
+    function inputLength(){
+      return input.value.length;
+    }
+
+    function create(){
+      let li = document.createElement('li');
+      li.appendChild(document.createTextNode(input.value));
+      ul.appendChild(li);
+      input.value = '';
+
+      let btn2 = document.createElement('button');
+      btn2.appendChild(document.createTextNode('X'));
+      li.appendChild(btn2);
+      btn2.addEventListener('click', delet);
+
+      function delet(){
+        li.classList.add('delet');
+      }
+    }
+
+    function len(){
+      if(inputLength() > 0){
+        create();
+      }
+    }
+
+    btn.addEventListener('click',len)
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+    .container{
+        border: 2px solid #fff;
+        width: 100vh;
+        height: 50vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(#5496ff,#8739e5);
+    }
+    .container h2{
+        border: 2px dashed #fff;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        color: #fff;
+    }
+    .container h2:nth-child(1){
+        letter-spacing: 1.3em;
+    }
+    .container h2:nth-child(2){
+        letter-spacing: -0.1em;
+    }
+</style>
+<body>
+    <div class="container">
+        <h2>letter spacing</h2>
+        <h2>letter spacing</h2>
+    </div>
+</body>
+</html>

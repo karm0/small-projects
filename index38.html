@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+    .container{
+        background-color: #000;
+        width: 100vh;
+        height: 80vh;
+        position: relative;
+        color: #fff;
+        text-align: center;
+    }
+    .container table{
+        width: 20vh;
+        border: 1px solid #ccc;
+        
+    }
+    .container table th,td{
+        border: 1px solid #ccc;
+        width: 100vh;
+        height: 5vh;
+        font-size: 1.3em;
+        color: #fff;
+        
+    }
+    .container th{
+        background: red;
+    }
+</style>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <th>students</th>
+                <th>points</th>
+                <th>overall rating</th>
+            </tr>
+            <tr>
+                <td>first student</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>second student</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>the third student</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <script>
+
+
+    let result = {firstStudent:5, secondStudent:3, theThirdStudent:1}
+
+
+        let square = document.querySelectorAll(".container table tr td");
+        
+        if(result.firstStudent = 5){
+            square[1].textContent = '5';
+            square[2].textContent = 'A';
+        }
+        
+        if(result.secondStudent = 3){
+            square[4].textContent = '3';
+            square[5].textContent = 'C';
+        }
+
+        if(result.theThirdStudent = 1){
+            square[7].textContent = '1';
+            square[8].textContent = 'F';
+        }
+
+
+    </script>
+</body>
+</html>

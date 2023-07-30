@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        border: 1px solid #fff;
+        width: 90vw;
+        height: 80vh;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        background: rgb(0, 0, 0);
+        color: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        font-weight: bold;
+        font-size: 5vw;
+        position: relative;
+    }
+    .container::before{
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background: #fff;
+        left: 5%;
+        animation: move 7s linear infinite;
+        box-shadow: 0 0 5px 5px;
+        opacity: 0.3;
+    }
+    @keyframes move{
+        0%{
+            left: 0%;
+        }
+        20%{
+            left: 20%;
+        }
+        30%{
+            left: 30%;
+        }
+        50%{
+            left: 49%;
+        }
+    }
+    .container::after{
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background: #fff;
+        right: 5%;
+        animation: move1 7s linear infinite;
+        box-shadow: 0 0 5px 5px;
+        opacity: 0.3;
+
+    }
+    @keyframes move1 {
+        0%{
+            right: 0%;
+        }
+        20%{
+            right: 20%;
+        }
+        30%{
+            right: 30%;
+        }
+        50%{
+            right: 49%;
+        }
+    }
+    .row{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 200;
+    }
+    .row span{
+        border: 3px solid #fff;
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+    }
+    .info{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 200;
+    }
+    .info span{
+        border: 2px solid #fff;
+        border-radius: 5px;
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+    }
+    .info2{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 200;
+    }
+    .info2 span{
+        border: 2px solid #fff;
+        border-radius: 5px;
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+    }
+    .info3{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 200;
+    }
+    .info3 span{
+        border: 2px solid #fff;
+        border-radius: 5px;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="row">
+            <span>id</span>
+            <span>name</span>
+            <span>salary</span>
+        </div>
+            <div class="info">
+                <span id="output1"></span>
+                <span id="output2"></span>
+                <span id="output3"></span>
+            </div>
+            <div class="info2">
+                <span id="output4"></span>
+                <span id="output5"></span>
+                <span id="output6"></span>
+            </div>
+            <div class="info3">
+                <span id="output7"></span>
+                <span id="output8"></span>
+                <span id="output9"></span>
+            </div>
+    </div>
+        
+    <script>
+        class User {
+            constructor(id, name, salary){
+                this.id = id;
+                this.name = name;
+                this.salary = salary < 5000 ? salary + 500 : salary;
+            }
+        }
+        let info = new User(110, 'Harry', 2000);
+        let info2 = new User(111, 'Jake', 4500);
+        let info3 = new User(112, 'Ava', 6000);
+
+        output1.textContent = info.id;
+        output2.textContent = info.name;
+        output3.textContent = info.salary;
+
+        output4.textContent = info2.id;
+        output5.textContent = info2.name;
+        output6.textContent = info2.salary;
+
+        output7.textContent = info3.id;
+        output8.textContent = info3.name;
+        output9.textContent = info3.salary;
+    </script>
+</body>
+</html>

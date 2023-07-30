@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #fff;
+        width: 90vw;
+        height: 90vh;
+        margin: auto;
+        border-radius: 10px;
+        background: linear-gradient(#abd1dc,#7097a8);
+        font-size: 10vw;
+        flex-direction: column;
+        color: #fff;
+        text-transform: capitalize;
+    }
+</style>
+<body>
+    <div class="container">
+            <span>healthy food</span>
+        <div id="output1"></div>
+        <div id="output2"></div>
+        <div id="output3"></div>
+        <div id="output4"></div>
+    </div>
+    <script>
+        let myMap = new Map()
+
+        myMap.set('doughnut','🍩')
+        myMap.set('chocolate', '🍫')
+        myMap.set('chicks', '🍗')
+        myMap.set('meat', '🥩')
+
+        output1.textContent = [...myMap.get('doughnut')]
+        output2.textContent = [...myMap.get('chocolate')]
+        output3.textContent = [...myMap.get('chicks')]
+        output4.textContent = [...myMap.get('meat')]
+        
+    </script>
+</body>
+</html>

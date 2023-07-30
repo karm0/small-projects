@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+        width: 100vw;
+        height: 100vh;
+        margin: auto;
+        border-radius: 10px;
+        background: linear-gradient(#be9c6e,#83979e);
+        overflow: hidden;
+    }
+    #output{
+        font-size: 10vw;
+        color: #fff;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+    .container span{
+        border: 5px solid #c4a780;
+        width: 70%;
+        height: 200%;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: move 5s linear infinite;
+        position: absolute;
+        opacity: 0.3;
+    }
+@keyframes move{
+    to{
+        transform: rotate(1turn);
+        }
+}
+</style>
+<body>
+    <div class="container">
+        <div id="output"></div>
+        <span></span>
+    </div>
+    <script>
+        let myArray = ['one','two','three'];
+
+        let reverse = myArray.reverse();
+
+        output.textContent = reverse.join( ' | ' );
+    </script>
+</body>
+</html>

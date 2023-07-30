@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #000;
+        
+    }
+    .container{
+        position: fixed;
+        width: 70px;
+        height: 30vh;
+        background: #fff;
+        left: 20px;
+        top: 150px;
+        transition: 0.5s;
+    }
+    .container.open{
+        width: 250px;
+    }
+    .container .center{
+        position: absolute;
+        width: 100%;
+        height: 60vh;
+        top: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        top: -110%;
+        left: 0;
+    }
+    .container .center::before{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        background: #000;
+        bottom: 177px;
+        left: 20px;
+    }
+    .container .center::after{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 1px;
+        bottom: 185px;
+        background: #000;
+        left: 20px;
+        box-shadow: 0 -8px #000;
+    }
+    .container ul{
+        list-style: none;
+        
+    }
+    .container ul li{
+        font-size: 15px;
+        position: relative;
+        top: 15px;
+        margin-bottom: 5px;
+        left: -40px;
+        padding: 10px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    .container ul li.active{
+        background: red;
+        
+    }
+    .container ul li:hover{
+        width: 51px;
+        font-size: 35px;
+    }
+    .container ul li .title{
+        position: absolute;
+        color: #000;
+        left: 100px;
+        opacity: 0;
+        overflow: hidden;
+    }
+    .container.open ul li .title{
+        opacity: 1;
+        overflow: visible;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="center"></div>
+        <ul>
+            <li class="list active" style="background: red;">
+                <span class="icon">🎁</span>
+                <span class="title">Gift</span>
+            </li>
+            <li class="list" style="background: yellow;">
+                <span class="icon">😂</span>
+                <span class="title">Happy</span>
+            </li>
+            <li class="list" style="background: blue;">
+                <span class="icon">🤖</span>
+                <span class="title">Robot</span>
+            </li>
+            <li class="list" style="background: rgb(252, 159, 255);">
+                <span class="icon">❤️</span>
+                <span class="title">Heart</span>
+            </li>
+        </ul>
+    </div>
+    <script>
+        let container = document.querySelector(".container");
+        let center = document.querySelector(".center");
+        let list = document.querySelectorAll(".list");
+        
+
+        center.onclick = function(){
+            container.classList.toggle("open");
+        };
+
+        function active(){
+            list.forEach((ele)=>
+                ele.classList.remove("active"));
+                this.classList.add("active");
+        }
+        list.forEach((ele)=>
+        ele.addEventListener("click", active));
+    </script>
+</body>
+</html>

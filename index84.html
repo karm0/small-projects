@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 80vw;
+        height: 80vh;
+        border: 1px solid #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        font-size: 10vw;
+        text-align: center;
+        background: linear-gradient(#e0dede,#807c7c);
+        border-radius: 10px;
+    }
+    #output5{
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 65%;
+        left: 50%;
+        font-size: 5vw;
+        text-align: center;
+        color: #fff;
+        text-transform: capitalize;
+        font-family:cursive;
+        box-shadow: 0 0 5px 5px #fff;
+        padding: 10px;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div class="container">
+        <span id="output1"></span>
+        <span id="output2"></span>
+        <span id="output3"></span>
+        <span id="output4"></span>
+    </div>
+    <div id="output5"></div>
+    <script>
+        let myMap = new Map()
+        myMap.set('doctor' , '👨‍🔬')
+        myMap.set('engineer' , '👷')
+        myMap.set('officer' , '👮‍♂️')
+        myMap.set('farmer' , '🧑‍🌾')
+
+        output1.textContent = myMap.get('doctor');
+        output2.textContent = myMap.get('engineer');
+        output3.textContent = myMap.get('officer');
+        output4.textContent = myMap.get('farmer');
+
+        output5.textContent = myMap.has('astronaut');
+
+    </script>
+</body>
+</html>

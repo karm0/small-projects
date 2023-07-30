@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+        width: 90vw;
+        height: 90vh;
+        margin: auto;
+        background: #08546c;
+        flex-direction: column;
+        text-align: center;
+        font-size: 10vw;
+        color: #fff;
+        border-radius: 10px;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div class="container">
+        <div id="outbut"></div>
+        <div id="outbut2"></div>
+    </div>
+    <script>
+        let mySet = new Set(['😂', '😀', '🥲', '😝', '😁'])
+
+        outbut.textContent = [...mySet].join( ' ' )
+
+        outbut2.textContent = mySet.has('🥲')
+
+    </script>
+</body>
+</html>

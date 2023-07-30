@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: #000;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        display: block;
+        position: relative;
+        margin:  auto;
+        transform: translate(10%,150%);
+    }
+    .container .text{
+        box-shadow: 0 0 5px 5px #fff;
+        width: fit-content;
+        padding: 0 10px;
+    }
+
+    .container p{
+        color: #fff;
+        font-size: 2rem;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;
+    }
+    .container p span{
+        color: orange;
+    }
+    .btn{
+        text-align: center;
+    }
+    #btn{
+        font-size: 1.2rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="text">
+            <p id="text">Hello <span>There</span></p>
+        </div>
+        <div class="btn">
+            <button id="btn">Click</button>
+        </div>
+    </div>
+    <script>
+        let text = document.getElementById('text');
+        let span = document.querySelector('.container .text p span');
+        let btn = document.getElementById('btn');
+
+        btn.addEventListener('click',function(){
+            text.style.fontSize = '3rem';
+            span.style.color = 'blue';
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 90vh;
+    }
+    .container{
+        border: 1px solid black;
+        width: 80vw;
+        height: 30vw;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: #17082d;
+        position: relative;
+        overflow: hidden;
+    }
+    .container ul{
+        text-transform: capitalize;
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+    }
+    .container ul li{
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+    .container .one{
+        list-style-type: upper-roman;
+    }
+    .container .twe{
+        list-style-type: lower-alpha;
+    }
+    .container .three{
+        list-style-type: decimal;
+    }
+    .container .four{
+        list-style-type:circle;
+    }
+    .container > span{
+        border: 1px solid #fff;
+        height: 20vw;
+        background: #fff;
+    }
+
+</style>
+<body>
+    <div class="container">
+        <ul class="one">
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+        </ul>
+        <span></span>
+        <ul class="twe">
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+        </ul>
+        <span></span>
+        <ul class="three">
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+        </ul>
+        <span></span>
+        <ul class="four">
+            <li>first</li>
+            <li>second</li>
+            <li>third</li>
+        </ul>
+    </div>
+</body>
+</html>
