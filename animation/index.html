@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation</title>
+    <link  rel="stylesheet" href="css/css.css">
+    <style>
+        body {
+            background: black;
+          }
+          button {
+            position: fixed;
+            top: 40px;
+            color: rgb(0, 0, 0);
+            background-color: white;
+            font-size: 20px;
+            border: 1px solid red;
+            animation: box 5s infinite;
+          }
+          
+          @keyframes box {
+            0% {
+              border-radius: 5px;
+              padding: 5px 20px;
+            }
+            50% {
+              border-radius: 20px;
+              padding: 30px 5px;
+            }
+            100% {
+              border-radius: 5px;
+              padding: 5px 20px;
+            }
+          }
+          
+          .btn1 {
+            left: 30px;
+          }
+          .btn2 {
+            right: 30px;
+          }
+          
+          p {
+            position: fixed;
+            top: 50%;
+            text-align: center;
+            color: white;
+            width: 100%;
+            font-size: 30px;
+            font-family: "Courier New", Courier, monospace;
+            animation: go 3s infinite;
+          }
+          
+          @keyframes go {
+            0% {
+              transform: translate(0, 0);
+            }
+            50% {
+              transform: translate(0, 20px);
+            }
+            100% {
+              transform: translate(0, 0);
+            }
+          }
+          .bubles {
+            display: flex;
+            justify-content: space-around;
+            display: flex;
+            bottom: -30px;
+            width: 100%;
+          }
+          .img {
+            width: 50px;
+            margin: 10px;
+            animation: non 5s infinite;
+          }
+          @keyframes non {
+            0% {
+              transform: translate(0, 0);
+            }
+            100% {
+              transform: translate(0, 700px);
+              opacity: 0;
+            }
+          }
+          .img1 {
+            animation: non 5s infinite;
+          }
+          .img2 {
+            animation: non 7s infinite;
+          }
+          .img3 {
+            animation: non 9s infinite;
+          }
+          .img4 {
+            animation: non 11s infinite;
+          }
+          .img5 {
+            animation: non 15s infinite;
+          }
+          .img6 {
+            animation: non 6s infinite;
+          }
+          .img7 {
+            animation: non 5s infinite;
+          }
+          .img8 {
+            animation: non 9s infinite;
+          }
+          .img9 {
+            animation: non 7s infinite;
+          }
+          .img10 {
+            animation: non 3s infinite;
+          }
+          .Cloud {
+            display: flex;
+            justify-content: space-around;
+            display: flex;
+            width: 100%;
+            position: absolute;
+            top: -30px;
+          }
+          .pho {
+            width: 200px;
+            margin: 10px;
+            animation: su 3s infinite;
+          }
+          @keyframes su {
+            0% {
+              transform: translate(0, 0);
+            }
+            50% {
+              transform: translate(20px, 0);
+            }
+            100% {
+              transform: translate(0, 0);
+            }
+          }
+          
+    </style>
+</head>
+<body>
+
+        <button class="btn1">sing in</button>
+        <button class="btn2">sing up</button>
+        <p>Welcome</p>
+        <div class="bubles">
+            <img class="img img1" src="https://freepngimg.com/thumb/snow/76316-schema-uvrier-snowflake-free-frame-thumb.png">
+            <img class="img img2" src="https://freepngimg.com/thumb/snow/76316-schema-uvrier-snowflake-free-frame-thumb.png">
+            <img class="img img3" src="https://freepngimg.com/thumb/snow/76316-schema-uvrier-snowflake-free-frame-thumb.png">
+            <img class="img img4" src="https://freepngimg.com/thumb/snow/76316-schema-uvrier-snowflake-free-frame-thumb.png">
+            <img class="img img5" src="https://freepngimg.com/thumb/snow/76316-schema-uvrier-snowflake-free-frame-thumb.png">
+            <img class="img img6" src="https://freepngimg.com/thumb/snow/76316-schema-uvrier-snowflake-free-frame-thumb.png">
+            <img class="img img7" src="https://freepngimg.com/thumb/snow/76316-schema-uvrier-snowflake-free-frame-thumb.png">
+            <img class="img img8" src="https://freepngimg.com/thumb/snow/76316-schema-uvrier-snowflake-free-frame-thumb.png">
+            <img class="img img9" src="https://freepngimg.com/thumb/snow/76316-schema-uvrier-snowflake-free-frame-thumb.png">
+            <img class="img img10" src="https://freepngimg.com/thumb/snow/76316-schema-uvrier-snowflake-free-frame-thumb.png">
+        </div>
+        <div class="Cloud">
+            <img class="pho pho1" src="https://freepngimg.com/thumb/cloud/13-cloud-png-image-thumb.png">
+            <img class="pho pho2" src="https://freepngimg.com/thumb/cloud/13-cloud-png-image-thumb.png">
+            <img class="pho pho3" src="https://freepngimg.com/thumb/cloud/13-cloud-png-image-thumb.png">
+        </div>
+
+</body>
+</html>
