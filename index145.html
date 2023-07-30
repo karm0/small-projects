@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  html{
+  cursor: none;
+  }
+  .cursor{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+  }
+  .follow{
+    width: 5px;
+    height: 5px;
+    transition: all .4s;
+  }
+
+</style>
+<body>
+  <script>
+    let ht = document.querySelector('html');
+
+    let cursor = document.createElement('div');
+    cursor.classList.add('cursor');
+    ht.appendChild(cursor);
+
+    let follow = document.createElement('div');
+    follow.classList.add('cursor','follow');
+    ht.appendChild(follow);
+
+    ht.addEventListener('mousemove', (e)=>{
+      set(follow, e)
+      set(cursor, e)
+    });
+
+    function set(r,t){
+      r.style.transform = `translate(${t.clientX}px, ${t.clientY}px)`
+    }
+  </script>
+</body>
+</html>
