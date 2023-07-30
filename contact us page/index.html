@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+</head>
+<link rel="stylesheet" href="style/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<body>
+  <div class="container" id="container">
+    <h2 id="contact">Contact Us</h2>
+    <div class="all" id="all">
+      <div class="imge">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <div class="container-input">
+  
+        <div>
+          <label for="text">Name</label>
+          <input type="text" placeholder="Your name" id="nameInput" onkeyup="fun()">
+        </div>
+  
+        <div>
+          <label for="text">Email</label>
+          <input type="text" placeholder="Your Email" id="emailInput" onkeyup="fun2()">
+        </div>
+  
+        <div>
+          <label for="text">Phone</label>
+          <input type="text" placeholder="Your Phone" id="phoneInput" onkeyup="fun3()">
+        </div>
+  
+        <div>
+          <label for="text">Massage</label>
+          <textarea class="difult" rows="4" id="massageInput" placeholder="How can help you?" onkeyup="fun4()" ></textarea>
+        </div>
+      </div>
+      <div class="btn">
+        <button id="btn">send</button>
+      </div>
+    </div>
+    <div class="animation" id="animation">
+      <i class="fa-solid fa-plane-up" id="plane"></i>
+    </div>
+  </div>
+  <script src="javascript/js.js"></script>
+</body>
+</html>
